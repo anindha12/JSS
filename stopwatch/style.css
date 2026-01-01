@@ -1,0 +1,139 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+/* Stopwatch container */
+.stopwatch {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    color: #fff;
+    max-width: 350px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+/* Header */
+.stopwatch header h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Time display */
+.time-display {
+    font-family: 'Courier New', monospace;
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls button {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button colors */
+#button-start {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: #fff;
+}
+
+#button-stop {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: #fff;
+}
+
+#button-reset {
+    background: linear-gradient(45deg, #ff9800, #f57c00);
+    color: #fff;
+}
+
+/* Button hover effects */
+.controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.controls button:active {
+    transform: translateY(-1px);
+}
+
+/* Button focus */
+.controls button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .stopwatch {
+        padding: 40px 30px;
+    }
+
+    .time-display {
+        font-size: 2.8rem;
+        padding: 15px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .controls button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
